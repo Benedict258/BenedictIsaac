@@ -8,22 +8,22 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/benedictisaac',
+      url: 'https://github.com/Benedict258',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/benedictisaac',
+      url: 'https://www.linkedin.com/in/benedict-isaac-0b60a732b/',
     },
     {
       name: 'Twitter',
       icon: Twitter,
-      url: 'https://twitter.com/benedictisaac',
+      url: 'https://twitter.com/DevChronicles_',
     },
     {
       name: 'Email',
       icon: Mail,
-      url: 'mailto:benedict@example.com',
+      url: 'mailto:benedictisaac258@gmail.com',
     },
   ];
 
@@ -50,7 +50,7 @@ const Footer = () => {
               Benedict Isaac
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Creative developer and digital marketer crafting beautiful, 
+              Creative developer, software developer and digital marketer crafting beautiful, 
               conversion-driven experiences that help brands grow and thrive 
               in the digital world.
             </p>
@@ -112,10 +112,10 @@ const Footer = () => {
             
             <p className="text-sm text-muted-foreground">
               <a 
-                href="mailto:benedict@example.com" 
+                href="mailto:benedictisaac258@gmail.com" 
                 className="text-primary hover:text-primary/80 font-medium"
               >
-                benedict@example.com
+                benedictisaac258@gmail.com
               </a>
             </p>
           </motion.div>

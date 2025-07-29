@@ -2,18 +2,25 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Code, Palette, TrendingUp, Zap } from 'lucide-react';
-import benedictAvatar from '@/assets/benedict-avatar.jpg';
+const benedictAvatar = '/ben.png';
 
 const About = () => {
-  const skills = [
-    'React & Next.js',
-    'TypeScript',
-    'Tailwind CSS',
-    'Framer Motion',
+  const techSkills = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React.js',
+    'Next.js',
+    'MERN Stack',
     'Node.js',
-    'Digital Marketing',
-    'Conversion Optimization',
-    'Brand Strategy',
+    'Tailwind CSS',
+  ];
+
+  const softSkills = [
+    'Communication',
+    'Problem Solving',
+    'Creative Thinking',
+    'Client Collaboration',
   ];
 
   const services = [
@@ -94,42 +101,53 @@ const About = () => {
             
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Hi, I'm Benedict! I'm a creative developer and digital marketer who believes 
-                that beautiful design and smart technology should work hand-in-hand to create 
-                meaningful business results.
-              </p>
-              
-              <p>
-                With over 5 years of experience building digital experiences for creators, 
-                startups, and established brands, I've learned that the best websites don't 
-                just look good—they drive conversions, build trust, and tell compelling stories.
-              </p>
-              
-              <p>
-                When I'm not coding or strategizing campaigns, you'll find me exploring new 
-                technologies, reading about psychology and marketing, or helping fellow 
-                entrepreneurs bring their visions to life.
+                I'm a creative software developer and digital strategist who builds high-performing 
+                websites and applications for creators, startups, and personal brands. My mission 
+                is to help you stand out online through technology, design, and strategy that 
+                delivers measurable results.
               </p>
             </div>
 
             {/* Skills */}
-            <div className="space-y-4">
-              <h4 className="text-xl font-heading font-semibold">Skills & Technologies</h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <motion.div
-                    key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <Badge variant="secondary" className="px-3 py-1 text-sm">
-                      {skill}
-                    </Badge>
-                  </motion.div>
-                ))}
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h4 className="text-xl font-heading font-semibold">Tech Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  {techSkills.map((skill, index) => (
+                    <motion.div
+                      key={skill}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Badge variant="secondary" className="px-3 py-1 text-sm">
+                        {skill}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="text-xl font-heading font-semibold">Soft Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  {softSkills.map((skill, index) => (
+                    <motion.div
+                      key={skill}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Badge variant="outline" className="px-3 py-1 text-sm">
+                        {skill}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

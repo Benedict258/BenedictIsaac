@@ -56,7 +56,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 mb-6"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Creative Developer & Digital Marketer</span>
+            <span className="text-sm font-medium">Creative Developer, Software Developer & Digital Marketer</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -108,7 +108,7 @@ const Hero = () => {
               className="text-lg px-8 py-6 h-auto border-primary/30 hover:border-primary hover:bg-primary/10"
               asChild
             >
-              <a href="mailto:benedict@example.com">Let's Collaborate</a>
+              <a href="mailto:benedictisaac258@gmail.com">Let's Collaborate</a>
             </Button>
           </motion.div>
 

@@ -29,26 +29,26 @@ const Contact = () => {
     const subject = `Project Inquiry from ${name}`;
     const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AProject Type: ${project}%0D%0ABudget Range: ${budget}%0D%0A%0D%0AMessage:%0D%0A${message}`;
     
-    window.location.href = `mailto:benedict@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:benedictisaac258@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const socialLinks = [
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/benedictisaac',
+      url: 'https://github.com/Benedict258',
       color: 'hover:text-gray-600',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/benedictisaac',
+      url: 'https://www.linkedin.com/in/benedict-isaac-0b60a732b/',
       color: 'hover:text-blue-600',
     },
     {
       name: 'Twitter',
       icon: Twitter,
-      url: 'https://twitter.com/benedictisaac',
+      url: 'https://twitter.com/DevChronicles_',
       color: 'hover:text-blue-400',
     },
   ];
@@ -93,7 +93,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Email Me</h4>
                     <p className="text-sm text-muted-foreground">
-                      benedict@example.com
+                      benedictisaac258@gmail.com
                     </p>
                   </div>
                 </div>
@@ -206,12 +206,11 @@ const Contact = () => {
                       className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       <option value="">Select project type</option>
-                      <option value="website">Website Development</option>
-                      <option value="ecommerce">E-commerce Platform</option>
-                      <option value="webapp">Web Application</option>
-                      <option value="redesign">Website Redesign</option>
-                      <option value="marketing">Digital Marketing</option>
-                      <option value="consultation">Consultation</option>
+                      <option value="website">Website</option>
+                      <option value="blog">Blog</option>
+                      <option value="portfolio">Portfolio</option>
+                      <option value="app">App</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                   <div className="space-y-2">
@@ -269,10 +268,10 @@ const Contact = () => {
           <p className="text-muted-foreground mb-4">
             Prefer a direct email? Send me a message at{' '}
             <a 
-              href="mailto:benedict@example.com" 
+              href="mailto:benedictisaac258@gmail.com" 
               className="text-primary hover:text-primary/80 font-medium"
             >
-              benedict@example.com
+              benedictisaac258@gmail.com
             </a>
           </p>
           <p className="text-sm text-muted-foreground">

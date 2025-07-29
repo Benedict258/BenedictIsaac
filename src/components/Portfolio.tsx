@@ -4,63 +4,96 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
 
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
-import project5 from '@/assets/project-5.jpg';
+import pathwayQuestScholars from '@/assets/pathway-quest-scholars.jpg';
+import creativePreview from '@/assets/creative-preview.jpg';
+import tendxAttendance from '@/assets/tendx-attendance.jpg';
+import taskManager from '@/assets/task-manager.jpg';
+import mernBlog from '@/assets/mern-blog.jpg';
+import reactTodo from '@/assets/react-todo.jpg';
+import syndicateCrypto from '@/assets/syndicate-crypto.jpg';
+import mindshiftLms from '@/assets/mindshift-lms.jpg';
 
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Modern SaaS Platform',
-      description: 'A comprehensive dashboard for managing business workflows with real-time analytics and team collaboration features.',
-      image: project1,
-      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Pathway Quest Scholars',
+      description: 'A web app that helps students prepare for national exams. I built the complete frontend and backend experience.',
+      image: pathwayQuestScholars,
+      tags: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
+      liveUrl: 'https://pathwayquest.onrender.com/about.html',
+      githubUrl: 'https://github.com/Benedict258',
       featured: true,
     },
     {
       id: 2,
-      title: 'E-commerce Marketplace',
-      description: 'Full-featured online marketplace with payment processing, inventory management, and vendor dashboard.',
-      image: project2,
-      tags: ['Next.js', 'Stripe', 'PostgreSQL', 'Vercel'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Creative Preview Website',
+      description: 'A sleek landing page I built to showcase my creative dev & design services.',
+      image: creativePreview,
+      tags: ['HTML', 'CSS', 'JavaScript', 'Tailwind'],
+      liveUrl: 'https://creative-16es.onrender.com',
+      githubUrl: 'https://github.com/Benedict258',
       featured: true,
     },
     {
       id: 3,
-      title: 'Creative Agency Website',
-      description: 'Award-winning agency website with stunning animations and case study presentations.',
-      image: project3,
-      tags: ['React', 'Framer Motion', 'GSAP', 'Contentful'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'TendX Smart Attendance',
+      description: 'An intelligent system for event/institution attendance management.',
+      image: tendxAttendance,
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      liveUrl: 'https://tendx.onrender.com',
+      githubUrl: 'https://github.com/Benedict258',
       featured: false,
     },
     {
       id: 4,
-      title: 'Financial Dashboard',
-      description: 'Real-time financial analytics dashboard with interactive charts and data visualization.',
-      image: project4,
-      tags: ['Vue.js', 'D3.js', 'Chart.js', 'Firebase'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Pathway Quest Task Manager',
+      description: 'A smart task management web app for maximizing productivity and efficiency.',
+      image: taskManager,
+      tags: ['React', 'CSS', 'JavaScript', 'Node.js'],
+      liveUrl: 'https://pathway-quest.onrender.com',
+      githubUrl: 'https://github.com/Benedict258',
       featured: false,
     },
     {
       id: 5,
-      title: 'Mobile-First App',
-      description: 'Progressive web app with offline capabilities and native-like user experience.',
-      image: project5,
-      tags: ['React Native', 'PWA', 'Redux', 'Express'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'MERN Developer Blog (In Progress)',
+      description: 'A developer blogging platform for tech stories, progress, and learning.',
+      image: mernBlog,
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      liveUrl: 'https://mern-blog-5h98.onrender.com/',
+      githubUrl: 'https://github.com/Benedict258',
       featured: true,
+    },
+    {
+      id: 6,
+      title: 'React Todo Manager',
+      description: 'A fast and simple task management app with a beautiful UI.',
+      image: reactTodo,
+      tags: ['React', 'CSS', 'JavaScript'],
+      liveUrl: 'https://react-assignment-app.onrender.com/',
+      githubUrl: 'https://github.com/Benedict258',
+      featured: false,
+    },
+    {
+      id: 7,
+      title: 'Syndicate Crypto Promo (In Progress)',
+      description: 'A web presence for crypto campaigns and awareness building.',
+      image: syndicateCrypto,
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      liveUrl: 'https://syndicate-inc.onrender.com',
+      githubUrl: 'https://github.com/Benedict258',
+      featured: false,
+    },
+    {
+      id: 8,
+      title: 'MindShift LMS (Upcoming)',
+      description: 'A smart learning management system with course tracking and admin tools.',
+      image: mindshiftLms,
+      tags: ['React', 'Next.js', 'MongoDB', 'Node.js'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/Benedict258',
+      featured: false,
     },
   ];
 
@@ -150,7 +183,7 @@ const Portfolio = () => {
         {/* Other Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects
-            .filter((project) => !project.featured || projects.filter(p => p.featured).indexOf(project) >= 2)
+            .filter((project) => !project.featured)
             .map((project, index) => (
               <motion.div
                 key={project.id}
@@ -225,7 +258,7 @@ const Portfolio = () => {
             Want to see more work or discuss your project?
           </p>
           <Button size="lg" className="bg-gradient-primary hover:glow-electric" asChild>
-            <a href="mailto:benedict@example.com?subject=Portfolio Discussion">
+            <a href="mailto:benedictisaac258@gmail.com?subject=Portfolio Discussion">
               Let's Talk About Your Project
             </a>
           </Button>
