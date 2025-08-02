@@ -21,6 +21,7 @@ import {
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import DownloadForm from '@/components/DownloadForm';
 
 const CareerServices = () => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
@@ -84,25 +85,30 @@ const CareerServices = () => {
 
   const testimonials = [
     {
-      name: "Maria Chen",
-      role: "Tech Product Manager",
-      quote: "Benedict went above and beyond to bring our vision to life. The system is fast, stable, and beautifully designed.",
+      name: "Neyda",
+      quote: "Very well written, sends a rough draft for you to see if everything looks good or want to add anything before finalizing.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face"
     },
     {
-      name: "David Rodriguez",
-      role: "Software Engineer",
-      quote: "His responsiveness and ability to simplify complex ideas made the entire process seamless. Highly recommended.",
+      name: "Mary",
+      quote: "Super professional, fast delivery, and really improved my resume. Highly recommend!",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face",
+      highlights: [
+        "Deep understanding",
+        "Delivery time", 
+        "Quick responsiveness",
+        "Attention to details",
+        "Eloquence",
+        "Professionalism of work"
+      ]
     },
     {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      quote: "An amazing collaboration! The design and speed of delivery exceeded expectations.",
+      name: "Namra",
+      quote: "Exceptional work.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face"
     }
   ];
 
@@ -483,20 +489,32 @@ const CareerServices = () => {
                         <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                       ))}
                     </div>
-                    <blockquote className="text-muted-foreground mb-6">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                      <div>
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                      </div>
-                    </div>
+                     <blockquote className="text-muted-foreground mb-6">
+                       "{testimonial.quote}"
+                     </blockquote>
+                     {(testimonial as any).highlights && (
+                       <div className="mb-6">
+                         <p className="font-semibold text-sm mb-2">Things that went well:</p>
+                         <ul className="text-sm text-muted-foreground space-y-1">
+                           {(testimonial as any).highlights.map((highlight: string, i: number) => (
+                             <li key={i} className="flex items-center">
+                               <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
+                               {highlight}
+                             </li>
+                           ))}
+                         </ul>
+                       </div>
+                     )}
+                     <div className="flex items-center gap-3">
+                       <img
+                         src={testimonial.avatar}
+                         alt={testimonial.name}
+                         className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
+                       />
+                       <div>
+                         <div className="font-semibold">{testimonial.name}</div>
+                       </div>
+                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -506,50 +524,7 @@ const CareerServices = () => {
       </section>
 
       {/* Free Resource Download */}
-      <section className="py-20 bg-card/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <Card className="glow-card">
-              <CardContent className="p-8 md:p-12">
-                <Download className="w-16 h-16 text-primary mx-auto mb-6" />
-                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
-                  Free Resource: Top 10 Resume Tips
-                </h2>
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Get my proven resume tips that helped hundreds of professionals land their dream jobs. 
-                  This comprehensive guide includes ATS optimization strategies and real examples.
-                </p>
-                
-                <form className="max-w-md mx-auto space-y-4" onSubmit={(e) => {
-                  e.preventDefault();
-                  window.location.href = `mailto:benedictisaac258@gmail.com?subject=Resume Tips Download Request&body=Please send me the Top 10 Resume Tips PDF. Email: ${(e.target as any).email.value}`;
-                }}>
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    className="w-full"
-                    required
-                  />
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-gradient-primary hover:glow-electric"
-                  >
-                    <Download className="mr-2 w-5 h-5" />
-                    Download Now (Free)
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
+      <DownloadForm />
 
       {/* FAQ Section */}
       <section className="py-20">
