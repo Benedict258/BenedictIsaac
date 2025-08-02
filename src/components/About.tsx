@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Code, Palette, TrendingUp, Zap } from 'lucide-react';
-const benedictAvatar = '/ben.png';
+const benedictAvatar = '/lovable-uploads/562cf4f4-338d-4c05-8fc9-26a55b5e23bb.png';
 
 const About = () => {
   const techSkills = [

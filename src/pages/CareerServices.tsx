@@ -203,7 +203,7 @@ const CareerServices = () => {
                 className="text-lg px-8 py-6 h-auto border-primary/30 hover:border-primary hover:bg-primary/10"
                 asChild
               >
-                <a href="#YOUR_FIVERR_LINK" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.fiverr.com/inbox/benedictresume" target="_blank" rel="noopener noreferrer">
                   Reach Out to Me on Fiverr
                 </a>
               </Button>
@@ -218,7 +218,7 @@ const CareerServices = () => {
             >
               <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-gradient-primary p-1">
                 <img
-                  src="/ben.png"
+                  src="/lovable-uploads/562cf4f4-338d-4c05-8fc9-26a55b5e23bb.png"
                   alt="Benedict Isaac"
                   className="w-full h-full rounded-full object-cover"
                 />
