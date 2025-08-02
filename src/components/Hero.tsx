@@ -110,6 +110,15 @@ const Hero = () => {
             >
               <a href="mailto:benedictisaac258@gmail.com">Let's Collaborate</a>
             </Button>
+
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-lg px-8 py-6 h-auto bg-gradient-secondary hover:glow-purple"
+              asChild
+            >
+              <a href="/career-services">Career Specialist</a>
+            </Button>
           </motion.div>
 
           {/* Stats */}

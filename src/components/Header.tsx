@@ -30,6 +30,7 @@ const Header = () => {
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#projects' },
     { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Career Specialist', href: '/career-services' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -61,6 +62,10 @@ const Header = () => {
                 href={item.href}
                 whileHover={{ y: -2 }}
                 className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                onClick={item.href.startsWith('#') ? (e) => {
+                  e.preventDefault();
+                  document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                } : undefined}
               >
                 {item.name}
               </motion.a>
@@ -121,7 +126,13 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    if (item.href.startsWith('#')) {
+                      e.preventDefault();
+                      document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                 >
                   {item.name}
                 </a>
